@@ -32,8 +32,8 @@ public class quick_sort {
     public static void quick(int[] arr, int low, int high) {
         if(low < high) { //stop when low = high means partition has became 1 element
             int pidx = partition(arr, low, high); //returns pivot final position index
-            partition(arr, low, pidx - 1);//works from low to pivot index - 1
-            partition(arr, pidx + 1, high);//works from pivot index + 1 to high
+            quick(arr, low, pidx - 1);//works from low to pivot index - 1
+            quick(arr, pidx + 1, high);//works from pivot index + 1 to high
         }
     }
     public static void main(String[] args) {

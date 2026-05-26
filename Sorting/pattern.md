@@ -139,3 +139,77 @@ If problem says:
 - "merge sorted data"
 
 → Think: Merge Sort modification
+
+---
+
+# Quick Sort Patterns
+
+---
+
+## 1. Partition Based Thinking
+
+Use when:
+- Need to divide array based on a condition
+
+Key Idea:
+- Choose a pivot
+- Put smaller elements on left
+- Bigger elements on right
+
+Examples:
+- Quick Sort
+- Quick Select
+- Dutch National Flag problem
+
+---
+
+## 2. Pivot Selection Strategy
+
+Use when:
+- Performance matters
+
+Options:
+- First element
+- Last element
+- Random element (better)
+
+Insight:
+- Good pivot → balanced split → fast
+- Bad pivot → unbalanced → slow (O(n^2))
+
+---
+
+## 3. Kth Element (Quick Select)
+
+Use when:
+- Find kth smallest/largest element
+
+Key Idea:
+- Partition array
+- Check pivot position
+- Only recurse on one side
+
+Why powerful:
+- O(n) average (faster than sorting)
+
+---
+
+## 4. In-place Partitioning
+
+Use when:
+- Memory is limited
+
+Key Idea:
+- Rearrange array without extra space
+- Use two pointers
+
+---
+
+## Pattern Recognition Clues
+
+If problem says:
+- "kth smallest/largest"
+- "rearrange around pivot"
+- "split array based on condition"
+
+→ Think: Quick Sort / Partition logic

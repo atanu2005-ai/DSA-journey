@@ -161,3 +161,117 @@ if(low >= high) return;
   - Count inversions
   - Merge intervals
   - External sorting
+
+  ---
+
+  # Quick Sort Notes
+
+## What is Quick Sort?
+- A Divide and Conquer algorithm
+- Picks a "pivot" element
+- Places it at its correct position
+- Then sorts left and right parts
+
+---
+
+## Core Idea (Very Important)
+
+1. Pick a pivot (usually first/last element)
+2. Put pivot in its correct position
+3. All smaller elements go to left
+4. All bigger elements go to right
+5. Repeat for left and right parts
+
+---
+
+## Example
+
+Array: [4, 6, 2, 5, 1]
+
+Pick pivot = 4
+
+After partition:
+[2, 1] 4 [6, 5]
+
+Now sort:
+Left → [2, 1]
+Right → [6, 5]
+
+Final result:
+[1, 2, 4, 5, 6]
+
+---
+
+## Key Step: Partition
+
+- Place pivot at correct index
+- Left side → smaller
+- Right side → greater
+
+---
+
+## Time Complexity
+
+- Best: O(n log n)
+- Average: O(n log n)
+- Worst: O(n^2)
+
+Worst happens when:
+- Array is already sorted
+- Bad pivot choice
+
+---
+
+## Space Complexity
+
+- O(log n) (recursion stack)
+
+---
+
+## When to Use?
+
+- Fast in practice
+- Works well for large arrays
+- Default sorting in many languages (optimized version)
+
+---
+
+## Important Concept
+
+Unlike merge sort:
+- Merge sort → always divides equally
+- Quick sort → depends on pivot
+
+Good pivot → fast
+Bad pivot → slow
+
+---
+
+## Base Condition
+
+if(low >= high) return;
+
+---
+
+## Common Mistakes
+
+- Wrong partition logic
+- Infinite loop in partition
+- Pivot not placed correctly
+- Off-by-one errors
+
+---
+
+## Why Quick Sort Matters
+
+- Very common in interviews
+- Teaches partition logic
+- Used in:
+  - kth smallest/largest element
+  - quick select algorithm
+
+---
+
+## Mistakes I made
+
+- Forgot to swap pivot at correct place

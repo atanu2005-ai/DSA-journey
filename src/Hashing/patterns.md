@@ -11,7 +11,7 @@ Example:
 
 ## 2. Prefix Sum + HashMap
 Use when:
-- Subarray sum problems
+- Subarray sum Array.Array.problems
 
 Example:
 - Subarray sum = K

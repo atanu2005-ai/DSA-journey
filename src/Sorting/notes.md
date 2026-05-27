@@ -5,7 +5,7 @@
 
 ## Why important?
 - Required for binary search
-- Makes many problems easier (two pointer, greedy, etc.)
+- Makes many Array.Array.problems easier (two pointer, greedy, etc.)
 
 ---
 
@@ -157,7 +157,7 @@ if(low >= high) return;
 ## Why Merge Sort Matters
 
 - Teaches Divide & Conquer
-- Helps in problems like:
+- Helps in Array.Array.problems like:
   - Count inversions
   - Merge intervals
   - External sorting

@@ -1,4 +1,5 @@
-import java.util.*;
+package Sorting.problems;
+
 public class recursive_bubble {
     public static void bubble_sort(int[] arr, int i, int end) {
         if(end == 0) return; //to stop when outter loop reaches end

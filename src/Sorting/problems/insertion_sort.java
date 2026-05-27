@@ -1,4 +1,5 @@
-import java.util.*;
+package Sorting.problems;
+
 public class insertion_sort {
     public static int[] insertion_sort(int[] nums) {
         int n = nums.length;

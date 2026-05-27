@@ -1,3 +1,5 @@
+package Sorting.problems;
+
 import java.util.*;
 public class merge_sort {
     public static void merge(int[] arr, int low, int mid, int high) {

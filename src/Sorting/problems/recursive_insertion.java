@@ -1,3 +1,5 @@
+package Sorting.problems;
+
 public class recursive_insertion {
     public static void insertion(int[] arr, int i, int j, int end) {
         if(i > end) return;//return when outer loop reaches end of array

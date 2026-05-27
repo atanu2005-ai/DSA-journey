@@ -1,4 +1,4 @@
-import java.util.*;
+package Sorting.problems;
 
 public class bubble_sort {
     public static int[] bubble_sort(int[] nums) {

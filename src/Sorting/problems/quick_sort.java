@@ -1,3 +1,5 @@
+package Sorting.problems;
+
 public class quick_sort {
     public static int partition(int[] arr, int low, int high) {
         int pivot = arr[low]; //choses low element as the pivot and does the process

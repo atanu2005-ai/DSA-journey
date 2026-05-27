@@ -1,4 +1,4 @@
-import java.util.*;
+package Sorting.problems;
 
 public class selection_sort {
     public static int[] selection_sort(int[] nums) {

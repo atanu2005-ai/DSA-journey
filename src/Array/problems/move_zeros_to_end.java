@@ -11,7 +11,7 @@ public class move_zeros_to_end {
         }
         int i = j + 1; //start i from next to j
         while(i < n) {
-            if(arr[i] != 0) { //if ith element is not i then swap with jth element
+            if(arr[i] != 0) { //if ith element is not 0 then swap with jth element
                 arr[j] = arr[i];
                 arr[i] = 0;
                 j++;

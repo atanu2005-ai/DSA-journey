@@ -20,7 +20,7 @@ public class DeleteDuplicate {
     }
     public static void main(String[] args) {
 
-        int[] nums = {30, 25, 25, 25, 16, 16, 30};
+        int[] nums = {10, 10, 12, 12, 12, 13, 16, 16, 18};
         System.out.println(remove_duplicate(nums, nums.length));
     }
 }

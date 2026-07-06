@@ -8,7 +8,7 @@ public class longestSubarrayOfSumK {
 
     //better
     //NOTE: This is the most optimal approach for all positive & negative numbers.
-    public static int better(int[] nums, int k) {
+    public static int better(int[] nums, long k) {
         //We will be needed a hashmap for prefix sum for each index.
         HashMap<Long, Integer> premap = new HashMap<>();
         long sum = 0;
@@ -38,15 +38,15 @@ public class longestSubarrayOfSumK {
     }
     //Optimal
     //NOTE: Only for positive values
-    public static int optimal(int[] nums, int k) {
+    public static int optimal(int[] nums, long k) {
         //We will use dynamic sliding window here
         //we will move right pointer and whenever sum is greater than k we will move left pointer
         int n = nums.length;
         int left = 0;
         int right = 0;
-        int sum = 0;
+        long sum = 0;
         int maxLen = 0;
-        while(left <= right && right < n) {
+        while(right < n) {
             sum += nums[right];
             if(sum == k) {
                 maxLen = Math.max(maxLen, (right - left) + 1);
@@ -61,7 +61,7 @@ public class longestSubarrayOfSumK {
     }
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 1, 1, 1, 1, 3, 3};
-        int k = 3;
+        long k = 3;
         System.out.println("Better: " + better(arr, k));
         System.out.println("Optimal: " + optimal(arr, k));
     }

@@ -1,6 +1,7 @@
 package Array.problems;
 
-import java.util.HashSet;
+import javax.naming.ldap.StartTlsRequest;
+import java.util.*;
 
 public class TwoSum {
     //Question 1: Find if there are 2 elements in the array which sum to target
@@ -34,6 +35,8 @@ public class TwoSum {
         int n = nums.length;
         int start = 0;
         int end = n - 1;
+
+        Arrays.sort(nums);
         while(start < end) {
             int sum = nums[start] + nums[end];
 
@@ -48,23 +51,17 @@ public class TwoSum {
         return "No";
     }
     //Question 2: Find the two indexes where nums[i] + nums[j] = target. (it's granted that these two indices exist)
-    //Same as Q1, just writing the optimal one
+    //hashmap is the most optimal solution (for non-sorted array)
     public static void optimal2(int[] nums, int target) {
-        int n = nums.length;
-        int start = 0;
-        int end = n - 1;
         int[] ans = new int[2];
-
-        while(start < end) {
-            int sum = nums[start] + nums[end];
-
-            if (sum < target) {
-                start++;
-            } else if (sum > target) {
-                end--;
-            } else {
-                ans[0] = start; ans[1] = end;
-                break;
+        int n = nums.length;
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for(int i = 0; i < n; i++) {
+            if(map.containsKey(target - nums[i])) {
+                ans[0] = map.get(target - nums[i]);
+                ans[1] = i;
+            }else {
+                map.put(nums[i], i);
             }
         }
         System.out.print("Optimal for Q2: " + ans[0] + ",");

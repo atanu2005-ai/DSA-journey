@@ -60,6 +60,7 @@ public class TwoSum {
             if(map.containsKey(target - nums[i])) {
                 ans[0] = map.get(target - nums[i]);
                 ans[1] = i;
+                break;
             }else {
                 map.put(nums[i], i);
             }
